@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+    <style>
+        main{
+          height: 70vh;
+        }
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 75%;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        table, th, td{
+            border: 1px solid;
+        }
+        th, td{
+            text-align: left;
+            padding: 10px;
+        }
+        caption{
+          font-size: 30px;
+          font-weight: 700;
+        }
+    </style>
+  </head>
+  <body>
+    <nav id="navigation">
+      <span>
+        <a href="/">.ojay</a>
+      </span>
+        
+      <a href="/#biography" role="link">About</a>
+      <a href="/form/" role="link">Register</a>
+      <a href="/table/" role="link">Table</a>
+      <a href="/media/" role="link">Media</a>
+    </nav>
+
+    <main>
+      <table tabindex="0">
+        <caption tabindex="0">
+          AltSchool Africa courses
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col" tabindex="0">SCHOOL</th>
+            <th colspan="4" scope="col" tabindex="0">COURSES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tabindex="0">
+            <th scope="row">SOE</th>
+            <td>Front-end Development</td>
+            <td>Back-end Development</td>
+            <td>Cloud Engineering</td>
+            <td>Cybersecurity</td>
+          </tr>
+
+          <tr tabindex="0">
+            <th scope="row">SOD</th>
+            <td>Data Analysis</td>
+            <td >Data Science</td>
+            <td colspan="2">Data Engineering</td>
+          </tr>
+          <tr tabindex="0">
+            <th scope="row">SOP</th>
+            <td>Product Design</td>
+            <td>Product Marketing</td>
+            <td colspan="2">Product Management</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <small>AltSchool Africa &copy; 2024</small>
+    </footer>
+  </body>
+</html>

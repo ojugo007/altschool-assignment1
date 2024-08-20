@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css">
     <title>Application form</title>
   </head>
   <body>
-    <nav>
-      <span>.ojay</span>
-      <a href="/">About me</a>
-      <a href="/form/">Register</a>
+    <nav id="navigation">
+      <span>
+        <a href="/">.ojay</a>
+      </span>
+        
+      <a href="/#biography" role="link">About</a>
+      <a href="/form/" role="link">Register</a>
+      <a href="/table/" role="link">Table</a>
+      <a href="/media/" role="link">Media</a>
+
     </nav>
     <main>
-      <h1>Sign Up</h1>
-      <h4>Take the next steps to apply at AltSchool Africa</h4>
+      <h1 tabindex="0">Signup</h1>
+      <h4 tabindex="0">Take the next steps to apply at AltSchool Africa</h4>
       <form>
         <!-- first name and last name fields -->
-        <div>
+        <div class="form-control">
           <div>
             <label for="firstName">First Name</label> <br />
             <input type="text" id="firstName" placeholder="Enter first name" />
@@ -27,14 +34,14 @@
           </div>
         </div>
         <!-- gender and dob fields -->
-        <div>
+        <div class="form-control">
           <div>
-            <label for="gender">Gender</label> <br />
-            <select name="" id="gender">
-              <option value="" disabled selected hidden>select gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
+            <label for="sex">Gender</label> <br />
+            <input type="text" list="gender" id="sex" placeholder="select gender">
+            <datalist id="gender">
+              <option value="male">
+              <option value="female">
+            </datalist>
           </div>
           <div>
             <label for="dob">Date of Birth</label><br />
@@ -43,10 +50,10 @@
         </div>
 
         <!-- email and phone number fields -->
-        <div>
+        <div class="form-control">
           <div>
             <label for="email">Email Address</label> <br />
-            <input type="email" id="email" placeholder="Enter email address" />
+            <input type="email" id="email" placeholder="Enter email address" autocomplete />
           </div>
           <div>
             <label for="phone">Phone Number</label><br />
@@ -54,51 +61,48 @@
           </div>
         </div>
         <!-- location/address fields-->
-        <div>
+        <div  class="form-control">
           <div>
             <label for="country">Country</label> <br />
-            <select name="" id="country">
-              <option value="" disabled selected hidden>
-                select your country
-              </option>
-              <option value="afghanistan">Afghanistan</option>
-              <option value="albania">Albania</option>
-              <option value="algeria">Algeria</option>
-              <option value="andorra">Andorra</option>
-              <option value="angola">Angola</option>
-              <option value="antigua">Antigua</option>
-              <option value="argentina">Argentina</option>
-              <option value="armenia">Armenia</option>
-              <option value="cameroun">Cameroun</option>
-              <option value="nigeria">Nigeria</option>
-              <option value="kenya">Kenya</option>
-              <option value="ghana">Ghana</option>
-            </select>
+            <input type="text" id="country" list="my-country" placeholder="select your country">
+            <datalist id="my-country">
+              <option value="afghanistan">
+              <option value="albania">
+              <option value="algeria">
+              <option value="andorra">
+              <option value="angola">
+              <option value="antigua">
+              <option value="argentina">
+              <option value="armenia">
+              <option value="cameroun">
+              <option value="nigeria">
+              <option value="kenya">
+              <option value="ghana">
+            </datalist>
           </div>
+
           <div>
             <label for="state">State/City of Residence</label><br />
-            <input
-              type="text"
-              id="state"
-              placeholder="Enter your state of residence"
-            />
+            <input type="text" id="state" placeholder="Enter your state of residence"/>
           </div>
-          <!-- channel field -->
-          <div>
-            <label for="channel">How did you hear about us?</label>
-            <select name="" id="channel">
-              <option value="" disabled selected hidden>select channel</option>
-              <option value="twitter">Twitter</option>
-              <option value="instagram">Instagram</option>
-              <option value="facebook">Facebook</option>
-              <option value="whatsapp">Whatsapp</option>
-              <option value="friend">Friend</option>
-              <option value="linkedin">Linkedin</option>
-              <option value="billboard">Billboard</option>
-            </select>
-          </div>
+        </div>
+
+        <!-- channel field -->
+        <div class="form-control-full">
+            <label for="channel">How did you hear about us?</label> <br>
+            <input type="text" id="channel" list="channel-list" placeholder="select channel">
+            <datalist id="channel-list">
+              <option value="twitter">
+              <option value="instagram">
+              <option value="facebook">
+              <option value="whatsapp">
+              <option value="friend">
+              <option value="linkedin">
+              <option value="billboard">
+            </datalist>
+        </div>
           <!-- password -->
-          <div>
+          <div class="form-control">
             <div>
               <label for="pword">Password</label> <br />
               <input
@@ -124,5 +128,8 @@
 
       </form>
     </main>
+    <footer>
+      <small>AltSchool Africa &copy; 2024</small>
+    </footer>
   </body>
 </html>
